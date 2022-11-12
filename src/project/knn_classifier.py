@@ -1,8 +1,6 @@
 from sklearn.metrics import classification_report
 from sklearn.neighbors import KNeighborsClassifier
-import numpy as np
 from keras.datasets import mnist
-import tensorflow as tf
 import time
 import matplotlib.pyplot as plt
 
@@ -15,7 +13,7 @@ def calculate_accuracy(pred, test_labels):
     return correct / len(test_labels)
 
 
-def knn_classification(train_set, train_labels, test_set, test_labels, k=1):
+def knn_classification(train_set, train_labels, test_set, test_labels, k=3):
     knn = KNeighborsClassifier(n_neighbors=k)
     knn.fit(train_set, train_labels)
     pred = knn.predict(test_set)
