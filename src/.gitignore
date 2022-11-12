@@ -1,0 +1,6 @@
+.idea
+Pipfile
+__pycache__
+Pipfile.lock
+typescript
+
